@@ -1,0 +1,190 @@
+
+(PES_AI_PIP) C:\Users\Dell\Envs\PES_AI_PIP>python optimizer.py
+
+(PES_AI_PIP) C:\Users\Dell\Envs\PES_AI_PIP>python "C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\model_optimizer\mo_tf.py" --input_model "C:\Users\Dell\Envs\PES_AI_PIP\model\pro_dl_frozen_model.pb" --output_dir './model'  --input_shape "[1,128,128,3]" --data_type FP32
+Model Optimizer arguments:
+Common parameters:
+        - Path to the Input Model:      C:\Users\Dell\Envs\PES_AI_PIP\model\pro_dl_frozen_model.pb
+        - Path for generated IR:        C:\Users\Dell\Envs\PES_AI_PIP\'./model'
+        - IR output name:       pro_dl_frozen_model
+        - Log level:    ERROR
+        - Batch:        Not specified, inherited from the model
+        - Input layers:         Not specified, inherited from the model
+        - Output layers:        Not specified, inherited from the model
+        - Input shapes:         [1,128,128,3]
+        - Mean values:  Not specified
+        - Scale values:         Not specified
+        - Scale factor:         Not specified
+        - Precision of IR:      FP32
+        - Enable fusing:        True
+        - Enable grouped convolutions fusing:   True
+        - Move mean values to preprocess section:       False
+        - Reverse input channels:       False
+TensorFlow specific parameters:
+        - Input model in text protobuf format:  False
+        - Path to model dump for TensorBoard:   None
+        - List of shared libraries with TensorFlow custom layers implementation:        None
+        - Update the configuration file with input/output node names:   None
+        - Use configuration file used to generate the model with Object Detection API:  None
+        - Operations to offload:        None
+        - Patterns to offload:  None
+        - Use the config file:  None
+Model Optimizer version:        2019.3.0-408-gac8584cb7
+
+[ SUCCESS ] Generated IR model.
+[ SUCCESS ] XML file: C:\Users\Dell\Envs\PES_AI_PIP\'./model'\pro_dl_frozen_model.xml
+[ SUCCESS ] BIN file: C:\Users\Dell\Envs\PES_AI_PIP\'./model'\pro_dl_frozen_model.bin
+[ SUCCESS ] Total execution time: 3.20 seconds.
+
+
+
+(PES_AI_PIP) C:\Users\Dell\Envs\PES_AI_PIP>python infer.py -i "C:\Users\Dell\Envs\PES_AI_PIP\Inference_Data" -d "CPU" -m "C:\Users\Dell\Envs\PES_AI_PIP\model\pro_dl_frozen_model.xml"
+infer.py:50: DeprecationWarning: from_ir() method of IENetwork is deprecated. Please use IENetwork class constructor to create valid IENetwork instance
+  net = IENetwork.from_ir(model=model_xml, weights=model_bin)
+
+
+The predicted results on Inference Data :
+
+Case 1 DWI.jpg :
+Right parietal lobe
+Actual: Right parietal lobe
+
+Case 10 DWI.jpg :
+Left corona radiata
+Actual: Left centrum semiovale
+
+Case 11 DWI.jpg :
+Left frontal lobe in precentral gyral location
+Actual: Left thalamus
+
+Case 12 DWI.jpg :
+Bilateral cerebellar hemispheres
+Actual: Medulla on the right side
+
+Case 13 DWI.jpg :
+Left Fronto parietal
+Actual: Left temporal and parietal lobes
+
+Case 14 DWI.jpg :
+Bilateral frontal lobes
+Actual: Left corona radiata
+
+Case 15 DWI.jpg :
+Right parietal lobe
+Actual: Right parietal lobe
+
+Case 16 DWI.jpg :
+Left frontal lobe
+Actual: Left fronto-parietal lobe
+
+Case 17 DWI.jpg :
+Right parietal lobe
+Actual: Left hippocampus
+
+Case 18 DWI.jpg :
+Right parietal lobe
+Actual: Right parietal lobe
+
+Case 19 DWI.jpg :
+Right parietal lobe
+Actual: Right parietal lobe
+
+Case 2 DWI.jpg :
+Bilateral frontal lobes
+Actual: Pons
+
+Case 20 DWI.jpg :
+Right cerebellar hemisphere
+Actual: Right cerebellar hemisphere
+
+Case 21 DWI.jpg :
+Left parietal lobe
+Actual: Left cerebellar hemisphere
+
+Case 22 DWI.jpg :
+Left frontal lobe in precentral gyral location
+Actual: Left thalamus
+
+Case 23 DWI.jpg :
+Left frontal lobe in precentral gyral location
+Actual: Right centrum semiovale
+
+Case 24 DWI.jpg :
+Bilateral frontal lobes
+Actual: Right frontal lobe
+
+Case 25 DWI.jpg :
+Right parietal lobe
+Actual: Left ganglio- capsular region
+
+Case 26 DWI.jpg :
+Bilateral frontal lobes
+Actual: Left frontal and parietal lobe
+
+Case 27 DWI.jpg :
+Bilateral frontal lobes
+Actual: Right precentral gyri
+
+Case 28 DWI.jpg :
+Right fronto-parieto-temporo- occipital lobes
+Actual: Right frontal and parietal lobes
+
+Case 29 DWI.jpg :
+Right ganglio-capsular region
+Actual: Right fronto-parietal lobes, right caudate nucleus
+
+Case 3 DWI.jpg :
+Left corona radiata
+Actual: left cerebellar hemisphere
+
+Case 30 DWI.jpg :
+Right corona radiata
+Actual: Right corona radiata
+
+Case 31 DWI.jpg :
+Left frontal lobe in precentral gyral location
+Actual: Left lentiform nucleus
+
+Case 32 DWI.jpg :
+Bilateral frontal lobes
+Actual: Right thalamus
+
+Case 33 DWI.jpg :
+Bilateral frontal lobes
+Actual: Right parietal lobe
+
+Case 34 DWI.jpg :
+Pontine-right
+Actual: Right cerebellar hemisphere
+
+Case 35 DWI.jpg :
+Left frontal lobe in precentral gyral location
+Actual: Right thalamus
+
+Case 36 DWI.jpg :
+Left frontal lobe in precentral gyral location
+Actual: Left centrum semiovale
+
+Case 4 DWI.jpg :
+Left frontal lobe in precentral gyral location
+Actual: posterior limb of the left internal capsule
+
+Case 5 DWI.jpg :
+Left parietal lobe
+Actual: Left occipital lobe
+
+Case 6 DWI.jpg :
+Right cerebellar hemisphere
+Actual: Left cerebral peduncle and left occipital lobe
+
+Case 7 DWI.jpg :
+Right ganglio-capsular region
+Actual: Right temporal lobe
+
+Case 8 DWI.jpg :
+Right fronto-parieto-temporo- occipital lobes
+Actual: Right frontal and parietal lobes, insula and external capsule
+
+Case 9 DWI.jpg :
+Right ganglio-capsular region
+Actual: Right corona radiata
