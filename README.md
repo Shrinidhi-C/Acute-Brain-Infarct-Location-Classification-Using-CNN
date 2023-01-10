@@ -46,16 +46,16 @@ PROCEDURE:
 
     * Further convert it to the IR model using the following commands.
 
-● python optimizer.py
+● Run the python optimizer.py
 
-● python "C:\Program Files(x86)\IntelSWTools\openvino\deployment_tools\model_optimizer\mo_tf.py" --input_model
-"C:\Users\Dell\Envs\PES_AI_PIP\model\pro_dl_frozen_model.pb"--output_dir './model' --input_shape "[1,128,128,3]" --data_type FP32
+     ● python "C:\Program Files(x86)\IntelSWTools\openvino\deployment_tools\model_optimizer\mo_tf.py" --input_model "C:\Users\Dell\Envs\PES_AI_PIP\model\pro_dl_frozen_model.pb"--output_dir './model' --input_shape "[1,128,128,3]" --data_type FP32
 
-* The optimizer takes the path to mo_tf.py, the .pb file of the model, shape of the input fed and the data type as the arguments.
+     * The optimizer takes the path to mo_tf.py, the .pb file of the model, shape of the input fed and the data type as the arguments.
+
+
 Next the model is to be executed and the predictions to be made on the inference data using:
 
-● python infer.py -i "C:\Users\Dell\Envs\PES_AI_PIP\Inference_Data" -d "CPU" -m
-"C:\Users\Dell\Envs\PES_AI_PIP\model\pro_dl_frozen_model.xml"
+     ● python infer.py -i "C:\Users\Dell\Envs\PES_AI_PIP\Inference_Data" -d "CPU" -m "C:\Users\Dell\Envs\PES_AI_PIP\model\pro_dl_frozen_model.xml"
 
 * The infer.py takes the path of the inference data, target device and the .xml file of the model as the arguments.
 (note: All the commands to be executed in command prompt in administrative mode under the virtual environment)
@@ -63,10 +63,7 @@ Next the model is to be executed and the predictions to be made on the inference
 
 * Output_weights : The file has the final output weights that are frozen and the model is used for prediction.
 
-* Names.txt : The file has the names and usn of the team members
-
 * model : Contains the .xml, ,pb, .bin, .mapping files.
 
 * Inference_Data : The unseen images to be predicted by the model.
 
-* Inference_results : The output of the Inference [along with commands]
