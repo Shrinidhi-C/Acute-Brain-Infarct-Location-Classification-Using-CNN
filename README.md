@@ -47,6 +47,9 @@ PROCEDURE:
     setupvars.bat
 
     * Further convert it to the IR model using the following commands.
+    
+![image](https://user-images.githubusercontent.com/57758182/211584701-6b00b9e1-ca08-430f-9476-934013cf2f68.png)
+
 
 ● Run the python optimizer.py
 
