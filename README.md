@@ -1,19 +1,19 @@
-# Acute-Brain-Infarct-loaction-classification-using-CNN
+#ACUTE BRAIN INFARCTS CLASSIFICATION USING CONVOLUTIONAL NEURAL NETWORKS
 
 """A Deep-Learning project to detect Acute infarcts in different brain locations using Keras and Tensorflow libraries."""
 
-ACUTE BRAIN INFARCTS CLASSIFICATION USING CONVOLUTIONAL NEURAL NETWORKS
-  A Deep-Learning project to detect Acute infarcts in different brain locations using Keras and Tensorflow libraries.
 
 The repository contains the source codes and the data folders as explained below:
 
 Source codes :
+
   ● cropp.ipynb : The script for the data cleaning [To be executed first ]
   ● Acute_Brain_Infarcts_Classification_PartA.ipynb : The script for part A of the classification procedure.
   ● optimizer.py : The python script to convert the .h5 model to .pb and further on to IR model. It also freezes the model weights and graphs
   ● infer.py : The minimal python script to obtain the inference results. It initializes the model and sets the parameters, target device and load the HW plugin. It reads the IR model and makes the executable environment.
   
 Other folders:
+
 ● The CLEANED_DATA contains the images sorted according to the location of the acute infarct in the brain images. It has all 46 folders (all unique locations)
 ● The DWI_DATA is the folder to be used. All the images are cropped and resized to (128X128) pixels as well. This folder contains 36 folders.
 ● The Merged_Data folder contains the data after merging of the similar classes (manually) from DWI_DATA
@@ -23,6 +23,7 @@ respective folder's name (location itself) as a label for the same (y_train)
 
 
 PROCEDURE:
+
 ● Run the cropp.ipynb which creates two folders:
   i) cropped_DATA: this folder contains all the images as in CLEANED_DATA which are cropped and stored in the same format
   ii) DWI_DATA: this folder contains only the DWI images from the cropped_DATA
