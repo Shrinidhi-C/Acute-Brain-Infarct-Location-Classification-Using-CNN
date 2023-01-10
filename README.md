@@ -24,7 +24,7 @@ Other folders:
      ● The Merged_Data folder contains the data after merging of the similar classes (manually) from DWI_DATA.
 
      ● Train_Data_31 : This folder has all images being augmented with 30 copies per class .This has to be used as the training data (X_train) , with the
-respective folder's name (location itself) as a label for the same (y_train).
+        respective folder's name (location itself) as a label for the same (y_train).
 
      ● test : This folder has 10 folders (only repeated locations on merging the similar classes) . This has to be used as the test data with the respective folder's name (location itself) as a label for the same( y_test).
 
@@ -69,4 +69,4 @@ Next the model is to be executed and the predictions to be made on the inference
 
 * Inference_Data : The unseen images to be predicted by the model.
 
-* Inference_results : The output of the Inference [along with commands
+* Inference_results : The output of the Inference [along with commands]
