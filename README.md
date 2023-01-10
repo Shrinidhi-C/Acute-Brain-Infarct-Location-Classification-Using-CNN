@@ -2,6 +2,8 @@
 
 """A Deep-Learning project to detect Acute infarcts in different brain locations using Keras and Tensorflow libraries."""
 
+![image](https://user-images.githubusercontent.com/57758182/211582022-abb83cd9-2eb7-4fc1-a55e-dc90498bb1ff.png)
+
 
 The repository contains the source codes and the data folders as explained below:
 
